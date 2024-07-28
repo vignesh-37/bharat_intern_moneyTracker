@@ -1,0 +1,112 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('/assets/gradient-connection-background_52683-118592.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    color: white;
+    width: 90%; /* Use percentage width for responsiveness */
+    max-width: 400px; /* Set maximum width for larger screens */
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.container p {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #131212; /* Underline style */
+    background-color: transparent; /* Transparent background */
+    color:rgb(221, 212, 212); /* Text color */
+    outline: none; /* Remove default focus outline */
+}
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder {
+    color:rgb(221, 212, 212); /* Placeholder text color */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    
+    border-bottom-color: #f6faf6; /* Change underline color on focus */
+    
+}
+input[type="text"]:hover::placeholder, input[type="email"]:hover::placeholder, input[type="password"]:hover::placeholder{
+    color: transparent;
+}
+
+.gender{
+    color:rgb(221, 212, 212);
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.radio-group {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.radio-group label {
+    color: rgb(221, 212, 212);
+    margin-right: 20px;
+}
+
+#button-reg {
+    width: 50%;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    margin-top: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+#button-reg:hover {
+    color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.log button{
+    background: none;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0px;
+}
+
+.log button:hover{
+    text-decoration: underline;
+    
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 80%;
+    }
+}

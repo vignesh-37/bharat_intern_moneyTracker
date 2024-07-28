@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker</title>
+    <link rel="icon" href="/assets/form.png" type="icon">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <p>SIGNUP</p>
+        <form id="registration" action="/registeration" method="post" onsubmit="return validateForm()">
+            <input type="text" id="Username" placeholder="USERNAME"  name="username" required>
+            <input type="email" id="email" placeholder="EMAIL" name="email" required>
+            <input type="text" id="phone" placeholder="PHONE" name="phone" required>
+            <label class="gender">GENDER</label>
+            <div class="radio-group">  
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="male" required> Male
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="female" required> Female
+                </label>
+                <label for="other">
+                    <input type="radio" id="other" name="gender" value="other" required> Other
+                </label>
+            </div>
+            <input type="password" id="password" placeholder="PASSWORD" name="password" required>
+            <input type="password" id="repassword" placeholder="RE-ENTER" name="repassword" required>
+            <% if(error) { %>
+            <p style="color:red; font-size: smaller; margin-left: 10px; margin-top: 10px;"><%= error %></p>
+        <%}%>
+            <button id="button-reg" type="submit">Submit</button>
+        </form>
+        <form action="/" method="get"><p class="log"><button type="submit">LOGIN</button></p></form>
+    </div>
+    <script src="/public/js/registerAuth.js"></script>
+</body>
+</html>
